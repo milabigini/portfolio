@@ -1,0 +1,122 @@
+header {
+  position: fixed; /* Maak de container vast gepositioneerd */
+  top: 16px; /* Begin vanaf de bovenkant van het scherm */
+  left: -34px; /* Begin vanaf de linkerkant van het scherm */
+  width: 100%; /* Volledige breedte van de viewport */
+  height: 6%; /* Volledige hoogte van de viewport */
+  display: flex; /* Flexbox voor centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  z-index: 1;
+}
+
+#nav {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+#navstijl {
+  display: flex; /* Flexbox gebruiken voor de navigatie-items */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren in de header */
+  gap: 50px; /* Voeg ruimte tussen de knoppen toe */
+  padding: 10px; /* Voeg padding toe rondom de navigatie om ruimte te creëren */
+}
+
+/* Zorg ervoor dat de hamburgerknop alleen zichtbaar is op kleinere schermen */
+.menu-toggle {
+  display: none; /* Verberg de hamburgerknop standaard */
+}
+header > a {
+  cursor: url(../img/nat996.png) 30 30, pointer;
+  color: #ff78d2;
+}
+
+.button-2 {
+  border: solid 2px #ff78d2;
+  border-radius: 15px;
+  background-image: url(../img/che_g03.gif);
+  color: #ff78d2;
+  font-weight: 700;
+  font-size: 16px;
+  width: 174px;
+  height: 42px;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 3px 0;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+main {
+  margin-top: 4%;
+}
+main > #intro {
+  color: #ff78d2;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+div {
+  padding: 1%;
+  padding-bottom: 2%;
+  margin-bottom: 1%;
+  color: white;
+  font-size: 21px;
+}
+
+#matcha {
+  background-color: #858735;
+  border-radius: 17px;
+}
+#matcha > img:nth-of-type(1) {
+  width: 24.2%;
+}
+#matcha > img {
+  width: 24%;
+  margin-left: 9px;
+}
+#club {
+  background-color: #f55fad;
+  border-radius: 17px;
+}
+#club > img:nth-of-type(1) {
+  width: 37.6%;
+}
+#club > img {
+  width: 20%;
+}
+#mochi {
+  background-color: #90c376;
+  border-radius: 17px;
+}
+#mochi > #frame {
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  height: 100vh; /* Volledige hoogte van viewport */
+  margin: 0;
+}
+#mochi > #frame > iframe {
+  width: 63%;
+}
+#random {
+  background-color: #91beec;
+  border-radius: 17px;
+}
+#random > img {
+  width: 24%;
+}
+#random > img {
+  width: 24%;
+}
+#random > img:nth-of-type(1) {
+  width: 45.2%;
+}
