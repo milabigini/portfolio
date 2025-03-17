@@ -55,45 +55,104 @@
             </div>
           </div>
     </header>
-    <main>
+    <main >
+        <div id="overlay" class="overlay hidden"></div>
+
         <div id="intro">
-        <h1>Designs/logos I made</h1>
-       <p>Made whith XD / Photoshop</p>
-    </div>
-        <div id="matcha">
-            <h2>Matchablush</h2>
-            <p>Matcha cookie store</p>
-            <img src="../img/matchablush.png" alt="matchablushtotal">
-            <img src="../img/mb1.png" alt="matchablush poster 1">
-            <img src="../img/mb2.png" alt="matchablush poster 2">
-            <img src="../img/mb3.png" alt="matchablush poster 3">
-
+<img src="../img/folder.png" alt="">
+          <h1>Designs/logos I made</h1>
+         
         </div>
-
-            <div id="club">
-                <h2>Noise&color</h2>
-                <p>Club poster</p>
-                
-                <img src="../img/noise-af.png" alt="noise&color poster oustide">
-                <img src="../img/noise1.png" alt="noise&color poster 1">
-                <img src="../img/noise3.png" alt="noise&color poster 3">
-                <img src="../img/noise2.png" alt="noise&color poster 2">
-    
-            </div>
-            <div id="mochi">
-                <h2>Mochidoki</h2>
-                <p>Mochi logo design</p>
-            <div id="frame">
-                <iframe src="../img/mochi.pdf" width="67%" height="600px"></iframe>
-
-            </div>
-            </div>
-            <div id="random">
-                <h2>Random poster</h2>
-                <img src="../img/sunshine.png" alt="sunshine poster">
-                <img src="../img/expo.png" alt="expo">
-            
-            </div>
-    </main>
+      
+        <!-- Matchablush Preview -->
+        <div id="matcha-preview">
+          <img id="matcha-thumbnail" src="../img/matcha.png" alt="matchablushtotal">
+          <p>Matchablush</p>
+        </div>
+      
+        <div id="matcha" class="hidden">
+          <button id="close-matcha" class="close-btn">&times;</button>
+          <h2>Matchablush</h2>
+          <p>Matcha cookie store</p>
+          <img src="../img/matchablush.png" alt="matchablushtotal">
+          <img src="../img/mb1.png" alt="matchablush poster 1">
+          <img src="../img/mb2.png" alt="matchablush poster 2">
+          <img src="../img/mb3.png" alt="matchablush poster 3">
+        </div>
+      
+        <!-- Noise&Color Preview -->
+        <div id="club-preview">
+          <img id="club-thumbnail" src="../img/club.png" alt="noise&color poster outside">
+          <p>Noise&color</p>
+        </div>
+      
+        <div id="club" class="hidden">
+          <button id="close-club" class="close-btn">&times;</button>
+          <h2>Noise&color</h2>
+          <p>Club poster</p>
+          <img src="../img/noise-af.png" alt="noise&color poster outside">
+          <img src="../img/noise1.png" alt="noise&color poster 1">
+          <img src="../img/noise3.png" alt="noise&color poster 3">
+          <img src="../img/noise2.png" alt="noise&color poster 2">
+        </div>
+      
+        <!-- Mochidoki Preview -->
+        <div id="mochi-preview">
+          <img id="mochi-thumbnail" src="../img/mochi.png" alt="sunshine poster">
+          <p>Mochidoki</p>
+        </div>
+      
+        <div id="mochi" class="hidden">
+          <button id="close-mochi" class="close-btn">&times;</button>
+          <h2>Mochidoki</h2>
+          <p>Mochi logo design</p>
+          <div id="frame">
+            <iframe src="../img/mochi.pdf" width="67%" height="600px"></iframe>
+          </div>
+        </div>
+      
+        <!-- Random Poster Preview -->
+        <div id="random-preview">
+          <img id="random-thumbnail" src="../img/random.png" alt="sunshine poster">
+          <p>Random poster</p>
+        </div>
+      
+        <div id="random" class="hidden">
+          <button id="close-random" class="close-btn">&times;</button>
+          <h2>Random poster</h2>
+          <img src="../img/sunshine.png" alt="sunshine poster">
+          <img src="../img/expo.png" alt="expo">
+        </div>
+      </main>
+      
+      
+      
+      
+      
+      <script>// Functie om de inhoud te tonen en de overlay te laten verschijnen
+        function showContent(thumbnailId, contentId, previewId, closeBtnId, overlayId) {
+          // Toon de inhoud en de overlay wanneer de thumbnail wordt aangeklikt
+          document.getElementById(thumbnailId).addEventListener("click", function() {
+            document.getElementById(contentId).style.display = "block"; // Toon de inhoud
+            document.getElementById(previewId).style.zIndex = "-1"; // Plaats de preview achter de inhoud
+            document.getElementById(overlayId).classList.add("show"); // Toon de overlay
+          });
+        
+          // Sluit de inhoud en verberg de overlay wanneer de sluitknop wordt aangeklikt
+          document.getElementById(closeBtnId).addEventListener("click", function() {
+            document.getElementById(contentId).style.display = "none"; // Verberg de inhoud
+            document.getElementById(previewId).style.zIndex = "11"; // Breng de preview terug naar voren
+            document.getElementById(overlayId).classList.remove("show"); // Verberg de overlay
+          });
+        }
+        
+        // Pas de functie toe voor elke sectie met de overlay erbij
+        showContent("matcha-thumbnail", "matcha", "matcha-preview", "close-matcha", "overlay");
+        showContent("club-thumbnail", "club", "club-preview", "close-club", "overlay");
+        showContent("mochi-thumbnail", "mochi", "mochi-preview", "close-mochi", "overlay");
+        showContent("random-thumbnail", "random", "random-preview", "close-random", "overlay");
+        
+      </script>
+      
 </body>
 </html>
